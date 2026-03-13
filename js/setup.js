@@ -45,7 +45,7 @@ if(usernameChooser!==null){
 	usernameChooser.value=usernameValue;
 	usernameChooser.addEventListener('blur',function(){
 		const usernameCurrentValue=this.value;
-		if(usernameCurrentValue===null||usernameCurrentValue===''||usernameCurrentValue===' '){this.value='';setCookie('username','SKCro');}
+		if(usernameCurrentValue===null||usernameCurrentValue===''||usernameCurrentValue===' '){this.value='';setCookie('username','WebTV');}
 		else{setCookie('username',usernameCurrentValue);}
 		console.debug(`Selected username: ${usernameCurrentValue}`);
 	});
