@@ -1,0 +1,107 @@
+.main-content{
+	padding:0;
+	display:flex;
+	flex-direction:column;
+}
+
+.chat-header{
+	content:'';
+	display:flex;
+	position:relative;
+	height:10vw;
+	background-image:linear-gradient(180deg,#5d7f36,#435b29);
+	background-color:#5d7f36;
+	margin-bottom:0.5rem;
+}
+.chat-header::after{
+	content:'';
+	position:absolute;
+	top:100%;
+	width:100%;
+	height:1vw;
+	background-image:linear-gradient(180deg,#0008,#0000);
+}
+
+.header-text{
+	position:absolute;
+	height:9vw;
+	font-size:3.5vw;
+	font-weight:600;
+	margin-left:2vw;
+	margin-top:1vw;
+	word-wrap:anywhere;
+	overflow-y:scroll;
+	scrollbar-width:thin;
+	scrollbar-color:#0000 #0000;
+	background:#0000;
+	color:#000;
+	z-index:1;
+}
+
+.header-icon{
+	content:'';
+	width:14.4vw;
+	margin-left:auto;
+	overflow:hidden;
+	background-image:url(../images/chatBubbleTop.svg);
+	background-size:contain;
+	background-position:right;
+	background-repeat:no-repeat;
+	z-index:0;
+}
+
+#chatContent{height:100%;flex-grow:1;}
+#chatContentSource{width:100%;height:90vh;border:0;}
+
+#chatBar{
+	display:flex;
+	flex-direction:column;
+	flex-grow:0;
+	margin-left:1.5vw;
+}
+
+.border{margin-top:0;margin-bottom:0.3rem;}
+
+#chatMessageForm{
+	display:flex;
+	align-items:center;
+	width:100%;
+	justify-content:space-between;
+}
+
+#message{
+	flex-grow:1;
+	height:1rem;
+	background-color:#262626;
+	color:#ffc342;
+	caret-color:var(--webtv-formcursor);
+}
+
+#sendButton{
+	width:7rem;
+	font-size:1.4rem;
+	margin-right:1vw;
+}
+
+/* iframe stuff */
+.chat-message{display:flex;margin-left:1.6vw;}
+.chat-message.latest{margin-bottom:0.55rem;}
+.username{font-family:var(--black-font);}
+.message{padding-left:0.5rem;}
+
+.bottom-fade{
+	content:'';
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height:1.5vw;
+	background-image:linear-gradient(180deg,#19191900,#191919);
+}
+
+@media(max-width:760px){
+	.main-content{margin:0;}
+	.chat-icon{margin-left:84.5vw;}
+	.chat-container{height:98vh;}
+	#message{height:2rem;font-size:1.2rem;}
+	#sendButton{width:5rem;padding:0.4rem;margin-right:1.5vw;}
+}

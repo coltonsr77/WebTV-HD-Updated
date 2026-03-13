@@ -1,0 +1,1 @@
+There aren't any real "rules" since this isn't an actual service, but please credit me if you use this code in any capacity.

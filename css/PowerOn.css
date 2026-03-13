@@ -1,0 +1,169 @@
+/* Logo/Dialing/Splash CSS */
+
+@keyframes fadeInOut{0%,100%{opacity:0;}20%,80%{opacity:1;}}
+html,body{overflow:hidden;}
+body{
+  display:flex;
+  height:100vh;
+  flex-direction:column;
+  background-color:#000;
+  color:#808080;
+}
+
+.fade-in{animation:fadeTransition linear 0.5s;}
+.fade-out{animation:0.5s fadeout linear forwards;}
+@keyframes fadeout{from{opacity:1;}to{opacity:0;}}
+
+noscript,span{
+  position:fixed;
+  font-size:1.5vw;
+  top:50vh;
+  left:50vw;
+  width:50vw;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  text-shadow:0.1vw 0.1vw #000;
+  z-index:1;
+}
+noscript::before,span::before{
+  content:'';
+  display:block;
+  position:fixed;
+  top:-50vh;
+  left:-50vw;
+  width:100vw;
+  height:100vh;
+  transform:translate(25%,25%);
+  background-color:#0008;
+  backdrop-filter:blur(2px);
+  z-index:-1;
+}
+noscript li,span li{text-align:left;}
+
+#logo,#connecting,#splash{display:none;}
+
+#powerOn{
+  display:flex;
+  height:100vh;
+  align-items:center;
+  justify-content:center;
+  margin:0;
+}
+
+.hideOnClick{text-align:center;}
+
+#powerOnButton{
+  margin-left:auto!important;
+  margin-right:auto;
+  cursor:var(--cursor-click);
+}
+
+.animating{
+  width:35vw;
+  opacity:0;
+	filter:drop-shadow(0 -4px #000);
+  animation:fadeInOut 2s ease-in-out forwards;
+}
+.no-cursor{cursor:none;}
+
+#connecting{background:#000;}
+#city{
+  width:auto;
+  height:100vh;
+	margin:auto;
+	perspective:25em;
+  background-image:url(../images/Dialing.svg);
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+  z-index:-1;
+}
+#road{ /* This code sucks. */
+	position:fixed;
+	top:28%;
+	left:41.6%;
+	width:16%;
+	height:65%;
+	transform:rotate3d(1,0,0,82deg);
+	/*transform:rotate3d(1,0,0,96deg);*/
+	background-image:url(../images/road.svg);
+	background-size:contain;
+	background-position-x:center;
+	background-position-y:0em;
+	animation:roadAnim 2.5s linear infinite;
+}
+
+@keyframes roadAnim{
+	from{background-position-y:0em;}
+	to{background-position-y:100em;}
+}
+
+#progressbarContainer{
+	position:fixed;
+  top:85vh;
+	left:50vw;
+	width:85vw;
+	transform:translateX(-50%);
+}
+#skipDialing{float:right;}
+
+#splash{
+  position:fixed;
+  top:50%;
+  left:50%;
+  width:35vw;
+  font-size:25vw;
+  font-weight:bold;
+  transform:translate(-50%,-50%);
+  color:#f0f0f0;
+}
+body.SKCro #splash{
+	border:0.5vw solid #242424;
+	border-radius:2vw;
+	padding:0.5vw 0.5vw 2vw 0.5vw;
+	background:#191919;
+	box-shadow:inset 0.25vw 0.25vw 1vw #fff5,
+	inset -0.25vw -0.25vw 1vw #000,
+	0.5vw 0.5vw 0.2vw #000;
+}
+.splash-shine{animation:2.5s splashShine linear;}
+@keyframes splashShine{
+  0%{opacity:0.5;}
+  15%{opacity:1;}
+  30%,45%,100%{opacity:0;}
+}
+.glow{animation:4s glow ease-in-out infinite;}
+@keyframes glow{0%,100%{opacity:100%;}50%{opacity:75%;}}
+
+#itv{
+  display:none;
+  margin:auto;
+  pointer-events:none;
+  -webkit-user-select:none;
+  user-select:none;
+  font-weight:bold;
+}
+#itv::before{
+  content:'i';
+  font-family:Times New Roman,sans-serif;
+  font-weight:bold;
+}
+
+.spin{animation:spin 5s linear;}
+@keyframes spin{from{rotate:0deg;}to{rotate:360deg;}}
+
+@media(max-width:760px){
+  body{font-size:1.1rem;}
+  .animating,#splash{width:85vw;}
+  #city{background-size:150%;}
+	#road{top:38%;left:36.8%;width:25%;height:35%;}
+  #progressbarContainer{margin-left:8vw;margin-right:8vw;}
+	body.SKCro #splash{
+		border-width:2vw;
+		border-radius:4vw;
+		padding:1vw 1vw 4.5vw 1vw;
+		box-shadow:inset 0.5vw 0.5vw 2vw #fff5,
+		inset -0.5vw -0.5vw 2vw #000,
+		1vw 1vw 0.4vw #000;
+	}
+}

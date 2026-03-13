@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang=en><head>
+	<title>Search</title>
+	<link rel=stylesheet type=text/css href=../css/style.css>
+	<link rel=stylesheet type=text/css href=../css/service.css>
+	<script src=../js/main.js></script>
+	<script src=../js/cookies.js></script>
+	<script>function search(){go('https://theoldnet.com/get?url='+document.getElementById('q').value+'&year=1999&scripts=false&decode=false')}</script>
+	<style>
+	.sidebar-border.search{background-image:linear-gradient(180deg,#341111 40%,#862f2f 75%);}
+	#q{width:85%;}
+	p{margin-top:0.6rem;margin-bottom:1.5rem;}
+	.bottom-right-image.search{background-image:url(../images/centers/search/sidebarSearch.svg);}
+	</style>
+	<meta charset=UTF-8>
+	<meta name=viewport content="width=device-width,initial-scale=1">
+</head><body>
+<nav class=sidebar style=background-color:#5c1e1e>
+	<div class=sidebar-contents aria-role=navigation>
+		<img class="sidebar-logo clickable" src=../images/WebTVJewel.svg alt="WebTV Logo" onclick=go('../wtv-home/home.html')>
+		<div class="sidebar-border search"></div>
+		<div class="sidebar-link clickable">How to</div>
+		<div class="sidebar-border search"></div>
+	</div><div class="bottom-right-image search"></div>
+</nav>
+<main class=main-content>
+	<h1 class=top-header>Search the Web</h1>
+	<p>What are you looking for?</p>
+	<input type=text id=q>
+	<input type=submit value=Search class="ButtonBorder2 submit" onclick=search()>
+	<hr class=border>
+</main></body></html>

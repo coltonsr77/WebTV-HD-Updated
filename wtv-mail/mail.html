@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang=en><head>
+	<title>Mail for SKCro</title>
+	<link rel=stylesheet type=text/css href=../css/style.css>
+	<link rel=stylesheet type=text/css href=../css/service.css>
+	<link rel=stylesheet type=text/css href=../css/mail.css>
+	<script src=../js/main.js></script>
+	<script src=../js/cookies.js></script>
+	<script>if(cookieExists&&cookieExists('username')){document.title=`Mail for ${getCookie('username')}`;}</script>
+	<meta charset=UTF-8>
+	<meta name=viewport content="width=device-width,initial-scale=1">
+</head><body>
+<nav class=sidebar style=background-color:#333b5a>
+	<div class=sidebar-contents aria-role=navigation>
+		<img class="sidebar-logo clickable" src=../images/WebTVJewel.svg alt="WebTV Logo" onclick=go('../wtv-home/home.html')>
+		<div class="sidebar-border mail unavailable"></div>
+		<div class="sidebar-link mail unavailable">Write</div>
+		<div class="sidebar-border mail unavailable"></div>
+		<div class="sidebar-link mail unavailable">Storage</div>
+		<div class="sidebar-border mail unavailable"></div>
+		<div class="sidebar-link mail unavailable">Addresses</div>
+		<div class="sidebar-border mail unavailable"></div>
+		<div class="sidebar-link mail unavailable">Clean up</div>
+		<div class="sidebar-border mail unavailable"></div>
+		<div class="sidebar-link mail unavailable">Settings</div>
+		<div class="sidebar-border mail unavailable"></div>
+		<div class="sidebar-link mail unavailable">Help</div>
+		<div class="sidebar-border mail unavailable"></div>
+	</div><div class="bottom-right-image mail"></div>
+</nav>
+<main class=main-content>
+	<h2>Mail list for <span class=dynamic-username>SKCro</span></h2>
+	<p>You have 3 messages</p>
+	<header class=mail-header>
+		<hr class=border>
+		<table class=top-items-mail><thead>
+			<tr>
+			 	<td class=from>From</td>
+			 	<td class=subject>Subject</td>
+			 	<td class=date>Date</td>
+			</tr>
+		</thead></table>
+		<hr class=border>
+	</header>
+	<table class=mail-messages aria-role=main aria-label="List of mail messages."><tbody>
+		<tr class="mail-message unread clickable" id=email1 role=link aria-label="Mail message" onclick=go('readMail.html?messageID=0')>
+			<td class=from aria-label="Message is from:">SKCro</td>
+			<td class=subject aria-label="Message subject:">Welcome to WebTV HD!</td>
+			<td class=date aria-label="Message was sent:">Just Now</td>
+		</tr>
+		<tr class="mail-message clickable" id=email2 role=link aria-label="Mail message" onclick=go('readMail.html?messageID=1')>
+			<td class=from>johnlandlord@aol.com</td>
+			<td class=subject>Notice of Eviction</td>
+			<td class=date>1 minute ago</td>
+		</tr>
+		<tr class="mail-message clickable" id=email3 role=link aria-label="Mail message" onclick=go('readMail.html?messageID=2')>
+			<td class=from>Ana zon e .com</td>
+			<td class=subject>Plea se re-ente r your Anazone passwor d</td>
+			<td class=date>5 minutes ago</td>
+		</tr>
+	</tbody></table>
+</main></body></html>

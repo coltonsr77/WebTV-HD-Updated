@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang=en><head>
+	<title>Chat Page</title>
+	<link rel=stylesheet type=text/css href=../css/style.css>
+	<link rel=stylesheet type=text/css href=../css/service.css>
+	<link rel=stylesheet type=text/css href=../css/chat.css>
+	<script src=../js/main.js></script>
+	<script src=../js/cookies.js></script>
+	<meta charset=UTF-8>
+	<meta name=viewport content="width=device-width,initial-scale=1">
+</head><body>
+<nav class=sidebar style=background-image:linear-gradient(90deg,#3c384e,#1b1b1b)>
+	<div class=sidebar-contents aria-role=navigation>
+		<img class="sidebar-logo clickable" src=../images/WebTVJewel.svg alt="WebTV Logo" onclick=go('../wtv-home/home.html')>
+		<div class="sidebar-border bwgrad"></div>
+		<div class="sidebar-link clickable">Chat home</div>
+		<div class="sidebar-border bwgrad"></div>
+		<div class="sidebar-link clickable">Create</div>
+		<div class="sidebar-border bwgrad"></div>
+		<div class="sidebar-link clickable">People</div>
+		<div class="sidebar-border bwgrad"></div>
+		<div class="sidebar-link clickable">Trouble</div>
+		<div class="sidebar-border bwgrad"></div>
+		<div class="sidebar-link clickable">Whisper</div>
+		<div class="sidebar-border bwgrad"></div>
+		<div class="sidebar-link clickable">Help</div>
+		<div class="sidebar-border bwgrad"></div>
+	</div>
+</nav>
+<main class=main-content>
+	<section id=chatContent>
+		<iframe id=chatContentSource src=ChatContent.html sandbox=allow-same-origin scrollbar=show><!--All chat content is rendered through this iframe - it's kinda like WebTV's <wtvchattranscript> tag, but the content has to be handled via a server rather than the browser itself.--></iframe>
+	</section>
+	<section id=chatBar>
+		<hr class=border>
+		<form id=chatMessageForm>
+			<input type=text id=message class="inputNoSound input" autocomplete=off></input>
+			<button class="ButtonBorder2 submit" id=sendButton>Send</button>
+		</form>
+	</section>
+</main></body></html>
