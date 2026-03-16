@@ -20,7 +20,7 @@ addEventListener('DOMContentLoaded',function(){
 	<p>There's also a lot of stuff I plan to reimplement, like...</p>
 	<ul><li>Some Page Builder styles</li><li>Other service pages</li><li>Better transitions</li><li>More stuff I, again, can't name off the top of my head</li></ul>
 	<p>Thanks for checking out my project!</p>
-	<p>The latest update logs are available <a class=clickable href=https://github.com/SKCro/WebTV-HD/commits/main/ target=_blank>here</a>.</p>
+	<p>The latest update logs are available <a class=clickable href=https://github.com/coltonsr77/WebTV-HD-Updated/commits/main/ target=_blank>here</a>.</p>
 	<p>- coltonsr77</p>
 	</body></html>
 	`,`
