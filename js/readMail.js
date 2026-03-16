@@ -8,8 +8,8 @@ addEventListener('DOMContentLoaded',function(){
 	const email=document.getElementById('emailContent');
 	const messages=[`
 	<!DOCTYPE HTML><html lang=en><head><title>Welcome to WebTV HD!</title>
-	<meta name=sender content=SKCro>
-	<meta name=senderEmail content=SKCro@localhost>
+	<meta name=sender content=coltonsr77>
+	<meta name=senderEmail content=coltonsr77@localhost>
 	<meta name=date content="Just now (okay not really)">
 	<link rel=stylesheet type=text/css href=../css/style.css>
 	<link rel=stylesheet type=text/css href=../css/service.css>
@@ -21,7 +21,7 @@ addEventListener('DOMContentLoaded',function(){
 	<ul><li>Some Page Builder styles</li><li>Other service pages</li><li>Better transitions</li><li>More stuff I, again, can't name off the top of my head</li></ul>
 	<p>Thanks for checking out my project!</p>
 	<p>The latest update logs are available <a class=clickable href=https://github.com/SKCro/WebTV-HD/commits/main/ target=_blank>here</a>.</p>
-	<p>- SKCro</p>
+	<p>- coltonsr77</p>
 	</body></html>
 	`,`
 	<!DOCTYPE HTML><html lang=en><head><title>Notice of Eviction</title>
