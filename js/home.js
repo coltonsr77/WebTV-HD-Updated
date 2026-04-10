@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		path+'tictactoe.svg',
 		path+'real.svg'];
 		footerImage.src=images[Math.floor(Math.random()*images.length)];
-		console.info('Every 30 seconds, a half-minute passes in Africa');
+		console.info('Image has loaded.');
 	}
 	function changeImage(){try{pickRandomImage();}catch(error){return;}}
 	changeImage();
@@ -47,7 +47,7 @@ function funnyExplore(){
 		document.title=`Home for ${username}`;
 		e.pause();
 	}else{
-		document.title='Petscop Soundtrack - Explore';
+		document.title='Explore';
 		e.currentTime=0;
 		e.play();
 	}e.addEventListener('ended',function(){document.title=`Home for ${username}`;});
