@@ -3,7 +3,7 @@ name: Feature request
 about: Suggest an idea or feature for WebTV HD
 title: "[Request] "
 labels: enhancement
-assignees: SKCro
+assignees: coltonsr77
 
 ---
 
