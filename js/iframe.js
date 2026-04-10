@@ -1,7 +1,7 @@
 'use strict';
 //Import selection box code
 const selBoxScript=document.createElement('script');
-selBoxScript.src='https://SKCro.github.io/WebTV-HD/js/selectionBox.js';
+selBoxScript.src='https://wetvsim.coltonsr77.net/js/selectionBox.js';
 document.head.appendChild(selBoxScript);
 //Common variables
 const iframe=document.getElementById('mainFrame');
