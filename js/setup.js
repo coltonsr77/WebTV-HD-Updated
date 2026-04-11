@@ -7,7 +7,7 @@ function eatCookies(){
 		var eqPos=cookie.indexOf("=");
 		var name=eqPos>-1?cookie.substr(0,eqPos):cookie;
 		document.cookie=name+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
-	}showCustomAlert('Cookies for WebTV HD-Updated settings have been cleared.','none','none','history.back();');
+	}showCustomAlert('Cookies for WebTV HD-Updated settings have been cleared.','none','none','../wtv-home/home.html;');
 }//Change cookie clear link depending on browser
 const clearCookieBrowser=document.getElementById('clearCookiesBrowser');
 if(clearCookieBrowser!==null){
