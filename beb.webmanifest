@@ -1,7 +1,7 @@
 {
   "short_name": "WebTV HD",
   "dir": "auto",
-  "name": "WebTV HD",
+  "name": "WebTV HD-Updated",
   "background_color": "#191919",
   "theme_color": "#191919",
   "display": "browser",
@@ -30,7 +30,7 @@
   "shortcuts": [
     {
       "name": "Mail",
-      "url": "https://webtvsim.coltonsr77.net/?page=wtv-mail/mail.html",
+      "url": "https://coltonsr77.github.io/WebTV-HD-Updated/?page=wtv-mail/mail.html",
       "icons": [
         {
           "src": "https://progressier.com/assets/img/icons/at-sign.png?v=192",
