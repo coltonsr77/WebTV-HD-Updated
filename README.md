@@ -1,4 +1,4 @@
-# WebTV HD
+# WebTV HD-Updated
 ![WebTV HD logo](https://coltonsr77.github.io/WebTV-HD-Updated/Logo.svg)
 
 <sub>Previously known as "WebTV-CSS-Remake".</sub>
