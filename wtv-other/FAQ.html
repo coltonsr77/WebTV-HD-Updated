@@ -71,11 +71,11 @@
 	</article>
 	<article class=question-box id=whatisit aria-label="What exactly is this project? What are its goals?">
 		<h3 class=question>What exactly is this project? What are its goals?</h3>
-		<section class=answer>WebTV HD is a web-based recreation of Microsoft's <a class=clickable href=https://en.wikipedia.org/wiki/MSN_TV>WebTV (later MSN TV) service</a>, which initially launched in 1996. The goal of this project is to provide an accurate but scalable recreation of the box and service. Right now, there's no backend to power functionality like mail or chat, but that might change in the future. <b class=small><a class=clickable onclick=scrollToElement('whynobackend')>Don't get your hopes up though :P</a></b></section>
+		<section class=answer>WebTV HD-Updated is a web-based recreation of Microsoft's <a class=clickable href=https://en.wikipedia.org/wiki/MSN_TV>WebTV (later MSN TV) service</a>, which initially launched in 1996. The goal of this project is to provide an accurate but scalable recreation of the box and service. Right now, there's no backend to power functionality like mail or chat, but that might change in the future. <b class=small><a class=clickable onclick=scrollToElement('whynobackend')>Don't get your hopes up though :P</a></b></section>
 	</article>
 	<article class=question-box id=why aria-label="What encouraged you to create this?">
 		<h3 class=question>What encouraged you to create this?</h3>
-		<section class=answer>WebTV HD started as a simple port of a few WebTV pages to modern browsers (namely the settings page).<br>Back when I started this project, it was known as "WebTV-CSS-Remake" (rolls right off the tongue, I know) and was only targetting Samsung Smart TVs (particularly the one in my living room).<br>When others in the <a class=clickable href=https://discord.gg/qke279EUa8 target=_blank>WebTV Discord</a> noticed my work, they encouraged me to open up a GitHub repo. From there, the project became a full-on website theme, and now, what is basically a front-end concept.</section>
+		<section class=answer>WebTV HD-Updated started as a simple port of a few WebTV pages to modern browsers (namely the settings page).<br>Back when I started this project, it was known as "WebTV-CSS-Remake" (rolls right off the tongue, I know) and was only targetting Samsung Smart TVs (particularly the one in my living room).<br>When others in the <a class=clickable href=https://discord.gg/qke279EUa8 target=_blank>WebTV Discord</a> noticed my work, they encouraged me to open up a GitHub repo. From there, the project became a full-on website theme, and now, what is basically a front-end concept.</section>
 	</article>
 	<article class=question-box id=caniusethis aria-label="This looks awesome! Can I use this code for my own project?">
 		<h3 class=question>This looks awesome! Can I use this code for my own project?</h3>
@@ -93,8 +93,8 @@
 
 	<h2 class=header id=functionality>Functionality and code</h2>
 	<article class=question-box id=whatbox aria-label="What kind of box does WebTV HD try to replicate?">
-		<h3 class=question>What kind of box does WebTV HD try to replicate?</h3>
-		<section class=answer>In terms of functionality, WebTV HD simulates a WebTV Plus unit (as evidenced by the <a class=clickable onclick=parent.view()>TV Home page</a> and <a class=clickable onclick=parent.pip()>pip window</a> functionality).</section>
+		<h3 class=question>What kind of box does WebTV HD-Updated try to replicate?</h3>
+		<section class=answer>In terms of functionality, WebTV HD-Updated simulates a WebTV Plus unit (as evidenced by the <a class=clickable onclick=parent.view()>TV Home page</a> and <a class=clickable onclick=parent.pip()>pip window</a> functionality).</section>
 	</article>
 	<article class=question-box id=tvhome aria-label="How do I go to TV Home?">
 		<h3 class=question>How do I go to TV Home?</h3>
@@ -188,8 +188,8 @@
 		</section>
 	</article>
 	<article class=question-box id=whyaserver aria-label="I noticed that I can't use WebTV HD by opening index.html directly from disk. Why?">
-		<h3 class=question>I noticed that I can't use WebTV HD by opening index.html directly from disk. Why?</h3>
-		<section class=answer>WebTV HD works best when you use server software (eg. Apache) to host it, since the code expects a server to be in place. A lot of weird cross-origin problems occur when running it directly from disk, which can't be fixed unless you use a server. More info on this is available on the <a class=clickable href=https://github.com/SKCro/WebTV-HD/wiki/Why-can't-I-run-WebTV-HD-by-opening-index.html%3F target=_blank>wiki article.</a></section>
+		<h3 class=question>I noticed that I can't use WebTV HD-Updated by opening index.html directly from disk. Why?</h3>
+		<section class=answer>WebTV HD-Updated works best when you use server software (eg. Apache) to host it, since the code expects a server to be in place. A lot of weird cross-origin problems occur when running it directly from disk, which can't be fixed unless you use a server. More info on this is available on the <a class=clickable href=https://github.com/SKCro/WebTV-HD/wiki/Why-can't-I-run-WebTV-HD-by-opening-index.html%3F target=_blank>wiki article.</a></section>
 	</article>
 	<article class=question-box id=what aria-label="Why do you suck at coding?">
 		<h3 class=question>Why do you suck at coding?</h3>
@@ -213,7 +213,7 @@
 	</article>
 	<article class=question-box id=crossorigin aria-label="What does 'cross-origin' mean and why does it prevent so many features from working?">
 		<h3 class=question>What does "cross-origin" mean and why does it prevent so many features from working as expected?</h3>
-		<section class=answer>The term <code><b>cross-origin</b></code> is usually used to refer to pages that aren't a part of WebTV HD (ie. external websites). It's called that because the page isn't from the same <b>origin</b> (the origin, in this case, being WebTV HD).<br>Cross-origin restrictions are a security measure put in place by your web browser to prevent a malicious site from, say, embedding your bank website in an iframe, tricking you into logging in, and stealing your login data through the iframe. The page with the iframe on it (the <b>parent page</b>) cannot access what's in the iframe if its contents aren't from the same place. These restrictions prevent WebTV HD from easily reading details like the page name or modifying things on the page, such as the selection box or sidebar.</section>
+		<section class=answer>The term <code><b>cross-origin</b></code> is usually used to refer to pages that aren't a part of WebTV HD-Updated (ie. external websites). It's called that because the page isn't from the same <b>origin</b> (the origin, in this case, being WebTV HD).<br>Cross-origin restrictions are a security measure put in place by your web browser to prevent a malicious site from, say, embedding your bank website in an iframe, tricking you into logging in, and stealing your login data through the iframe. The page with the iframe on it (the <b>parent page</b>) cannot access what's in the iframe if its contents aren't from the same place. These restrictions prevent WebTV HD from easily reading details like the page name or modifying things on the page, such as the selection box or sidebar.</section>
 	</article>
 	<article class=question-box id=classesandids aria-label="What are classes and IDs?">
 		<h3 class=question>What are classes and IDs?</h3>
