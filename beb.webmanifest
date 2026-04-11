@@ -40,7 +40,7 @@
     },
     {
       "name": "Favorites",
-      "url": "https://webtvsim.coltonsr77.net/?page=wtv-favorite/favorite.html",
+      "url": "https://coltonsr77.github.io/WebTV-HD-Updated/?page=wtv-favorite/favorite.html",
       "icons": [
         {
           "src": "https://progressier.com/assets/img/icons/heart.png?v=192",
@@ -50,7 +50,7 @@
     },
     {
       "name": "Explore",
-      "url": "https://webtvsim.coltonsr77.net/?page=wtv-home/home.html",
+      "url": "https://coltonsr77.github.io/WebTV-HD-Updated/?page=wtv-home/home.html",
       "icons": [
         {
           "src": "https://progressier.com/assets/img/icons/compass.png?v=192",
@@ -60,7 +60,7 @@
     },
     {
       "name": "Search",
-      "url": "https://webtvsim.coltonsr77.net/?page=wtv-center/search.html",
+      "url": "https://coltonsr77.github.io/WebTV-HD-Updated/?page=wtv-center/search.html",
       "icons": [
         {
           "src": "https://progressier.com/assets/img/icons/search.png?v=192",
@@ -76,7 +76,7 @@
   "protocol_handlers": [
     {
       "protocol": "web+wtvhd",
-      "url": "https://webtvsim.coltonsr77.net/?page=%s"
+      "url": "https://coltonsr77.github.io/WebTV-HD-Updated/?page=%s"
     }
   ],
   "launch_handler": {
