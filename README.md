@@ -44,7 +44,7 @@ I don't have an exact roadmap - I just sorta add what I feel like adding. In no 
 If you'd like to suggest something, fill out the [feature suggestion template](https://github.com/coltonsr77/WebTV-HD-Updated/issues/new?assignees=coltonsr77&labels=enhancement&projects=&template=feature-request.md&title=%5BRequest%5D+) to let me know what you'd like to see added to WebTV HD.
 
 ## What if I need help using this code?
-If you need help for any reason, feel free to contact me on Discord. Username is the same as here: `teamcolton7`
+If you need help for any reason, feel free to contact me on Discord. Username is the same as here: `coltonsr777`
 
 Alternatively, you can contact me on Twitter (`@SD_COLTON`), but I don't really check Twitter often anymore, so Discord is your best bet.
 
