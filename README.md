@@ -16,7 +16,7 @@ Firefox is recommended - the progress bar animation and some JS timing stuff is 
 
 If anything is broken for you (and you're using a reasonably modern browser), **please [file a bug report](https://github.com/coltonsr77/WebTV-HD-Updated/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBug%5D+)** and tell me the issue, which browser you used, and your screen resolution. Provide a screenshot if possible.
 
-Alternatively, DM me on Discord - username is `teamcolton7`.
+Alternatively, DM me on Discord - username is `coltonsr77`.
 
 ## How do I use the code?
 **Important:** If you're planning to use this for a project or website, please credit me when possible. This could be a small credit at the bottom of your website or having my name (along with a link to the repo) on a credits page.
