@@ -92,7 +92,7 @@ window.help=function(){
 	'','text-shadow:0 -1px 1px #aaa;',
 	'','text-shadow:0 -1px 1px #aaa;',
 	'text-align:center;font-weight:900;');
-	return 'If you need help, contact me on Discord. My username is SKCro.';
+	return 'If you need help, contact me on Discord. My username is coltonsr77.';
 }
 //Main message handler
 function handleMessage(e){
