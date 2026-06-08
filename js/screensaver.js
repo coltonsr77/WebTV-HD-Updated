@@ -31,7 +31,7 @@ class webtvLogo{
 }
 
 function generateLogo(){
-	if(logoCount>30){showCustomAlert(`Caught in 4K trying to bypass the limits 📸`,'none','fuck','none');return;}
+	if(logoCount>30){showCustomAlert(`Caught in 4K trying to bypass the limits 📸`,'none','dang it','none');return;}
 	const newLogo=document.createElement('img');
 	newLogo.src='../images/WebTVJewelScreensaver.svg';
 	newLogo.classList.add('logo');
@@ -64,9 +64,9 @@ function morePlease(){
 			generateLogo();
 			showCustomAlert(`This has gone too far. No more logos for you, mister.`,'none','dang it','none');
 		}else{
-			showCustomAlert(`Caught in 4K trying to bypass the limits 📸`,'none','fuck','none');
+			showCustomAlert(`Caught in 4K trying to bypass the limits 📸`,'none','dang it','none');
 			return;
 		}
-	}else if(logoCount>30){showCustomAlert(`Caught in 4K trying to bypass the limits 📸`,'none','fuck','none');return;}
+	}else if(logoCount>30){showCustomAlert(`Caught in 4K trying to bypass the limits 📸`,'none','dang it','none');return;}
 	else{generateLogo();}
 }
