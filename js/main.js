@@ -41,9 +41,9 @@ addEventListener('DOMContentLoaded',function(){
 		inputNoSound[l].setAttribute('tabindex',0);
 	}
 
-	//Page name updater
+	// Page name updater
 	function pageNameUpdater(){
-		if(isTVHome()){return;}//a stupid workaround for an even more stupid bug
+		if(isTVHome()){return;}// A stupid workaround for an even more stupid bug
 		const observer=new MutationObserver(updatePageName);
 		function updatePageName(){parent.postMessage({type:'title',title:document.title},'*');}
 		function trackName(){
@@ -75,7 +75,7 @@ addEventListener('DOMContentLoaded',function(){
 	}handleDisplay();
 });
 
-//Link handler - shorthand for setting location.href
+// Link handler - shorthand for setting location.href
 function go(url){location.href=url;}
 
 /*Attempt at making loading progress indicators work - commented out because it doesn't work :P
@@ -87,7 +87,7 @@ window.addEventListener('progress',function(e){
 	}if(e.lengthComputable){getLoadPercentage();}else{setTimeout(getLoadPercentage,25);}
 }); */
 
-//ShowAlert handlers
+// ShowAlert handlers
 alert=function(text){parent.postMessage({type:'jsalert',text:text},'*');}
 function showAlert(text){parent.postMessage({type:'alert',text:text},'*');}
 function showCustomAlert(text,image,label,action){
@@ -107,7 +107,7 @@ function showCustomAlert(text,image,label,action){
 	}
 }
 
-//Loading indicator
+// Loading indicator
 addEventListener('pagehide',function(){
 	if(isTVHome()){return;}
 	parent.postMessage({type:'loading'},'*');
@@ -118,15 +118,15 @@ addEventListener('popstate',function(e){//I might never get this working :P
 	if(e.state&&e.state.direction==='backward'){console.error('FINALLY');playSound('backSound');}
 });
 
-//Message handler
+// Message handler
 function handleMessage(e){
 	switch(e.data.type){
-		case 'BGMusicQuery'://BG music stuff
+		case 'BGMusicQuery':// BG music stuff
 			const displayTag=document.querySelector('meta[name="display"]');
 			if(displayTag&&displayOptions.includes('noMusic')){parent.postMessage({type:bgmStatus,status:'disabled'},'*');}else{parent.postMessage({type:bgmStatus,status:'enabled'},'*');}
 		break;
 		case 'doAlertAction':eval(tempAction);tempAction='';break;
-		case 'find'://Find on page
+		case 'find':// Find on page
 			const term=find(e.data.term);
 			if(term){parent.postMessage({type:'matchFound'},'*');}else{parent.postMessage({type:'noMatchFound'},'*');}
 		break;
