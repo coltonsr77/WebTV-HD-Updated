@@ -1,5 +1,5 @@
 'use strict';
-//Most of this code was originally written by nitrate92
+// Most of this code was originally written by nitrate92
 const pO=document.getElementById('powerOn');
 const l=document.getElementById('logo');
 const c=document.getElementById('connecting');
