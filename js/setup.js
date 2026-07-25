@@ -1,5 +1,5 @@
 'use strict';
-//Cookie stuff
+// Cookie stuff
 const cookies=document.cookie.split(';');
 function eatCookies(){
 	for(var i=0;i<cookies.length;i++){
@@ -8,13 +8,13 @@ function eatCookies(){
 		var name=eqPos>-1?cookie.substr(0,eqPos):cookie;
 		document.cookie=name+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
 	}showCustomAlert('Cookies for WebTV HD-Updated settings have been cleared.','none','none','../wtv-home/home.html;');
-}//Change cookie clear link depending on browser
+}// Change cookie clear link depending on browser
 const clearCookieBrowser=document.getElementById('clearCookiesBrowser');
 if(clearCookieBrowser!==null){
 	if(navigator.userAgent.indexOf('Chrome')!=-1){clearCookieBrowser.href='https://support.google.com/accounts/answer/32050';}
 	else if(navigator.userAgent.indexOf('Firefox')!=-1){clearCookieBrowser.href='https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox#w_clear-cookies-for-any-website';}
 	else{clearCookieBrowser.href='https://google.com/search?q=clear+cookies';}
-}//Startup logo
+}// Startup logo
 const startupLogoChooser=document.getElementById('startupLogo');
 if(startupLogoChooser!==null){
 	let startupLogoValue;
@@ -31,7 +31,7 @@ if(startupLogoChooser!==null){
 		setCookie('startupLogo',selectedLogo);
 		console.debug(`Selected logo: ${selectedLogo}`);
 	});
-}//Username
+}// Username
 const usernameChooser=document.getElementById('username');
 if(usernameChooser!==null){
 	let usernameValue;
@@ -49,7 +49,7 @@ if(usernameChooser!==null){
 		else{setCookie('username',usernameCurrentValue);}
 		console.debug(`Selected username: ${usernameCurrentValue}`);
 	});
-}//Homepage theme
+}// Homepage theme
 const themeToggle=document.getElementById('SKCroTheme');
 if(themeToggle!==null){
 	if(cookieExists('useSKCroTheme')){
