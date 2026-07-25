@@ -22,13 +22,13 @@ async function powerOn(){
 	if(hOC){hOC.remove();}
 	highlight(sD);
 	selectionBox.style.opacity=0;
-	pO.classList.add('no-cursor');//Disable cursor whilst logo appears
+	pO.classList.add('no-cursor');// Disable cursor whilst logo appears
 	await wait(750);
 	playSound('modem');
 	l.style.display='block';
 	l.classList.add('animating');
-	await wait(3000);//Wait for logo to finish
-	initDialing();//Show dialing elements
+	await wait(3000);// Wait for logo to finish
+	initDialing();// Show dialing elements
 }
 
 function initDialing(){
@@ -134,7 +134,7 @@ window.doKnockoffFunnies=function(){
 	chooseLogo();
 	parent.postMessage({type:'knockoffGaming'},'*');
 	useKnockoffLogos=1;
-	console.info('using knockoff mode lmfao');
+	console.info('Using knockoff mode lmfao');
 }
 const path='images/logos/';
 window.useKnockoffLogos=Math.floor(Math.random()*100)+1===1?1:0;
