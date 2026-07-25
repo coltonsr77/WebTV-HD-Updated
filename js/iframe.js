@@ -1,15 +1,15 @@
 'use strict';
-//Import selection box code
+// Import selection box code
 const selBoxScript=document.createElement('script');
 selBoxScript.src='https://coltonsr77.github.io/WebTV-HD-Updated/js/selectionBox.js';
 document.head.appendChild(selBoxScript);
-//Common variables
+// Common variables
 const iframe=document.getElementById('mainFrame');
 const tvFrame=document.getElementById('tvFrame');
 const statusBar=document.getElementById('statusBar');
 const statusContainer=document.querySelector('.status-container');
 const optionsBar=document.getElementById('optionsBar');
-//Panel stuff
+// Panel stuff
 const panel=document.getElementById('panel');
 const textInput=document.getElementById('textQuery');
 const panelClear=document.getElementById('panelClear');
@@ -18,7 +18,7 @@ const panelSubmit=document.getElementById('panelSubmit');
 const panelAction=document.getElementById('panelAction');
 const bottomMessage=document.getElementById('bottomMessage');
 const pretext=document.getElementById('topInputPretext');
-//Sounds
+// Sounds
 const audioPath='audio/';
 window.clickSound=new Audio(audioPath+'click.mp3');
 window.backSound=new Audio(audioPath+'goBack.mp3');
@@ -94,7 +94,7 @@ window.help=function(){
 	'text-align:center;font-weight:900;');
 	return 'If you need help, contact me on Discord. My username is coltonsr77.';
 }
-//Main message handler
+// Main message handler
 function handleMessage(e){
 	switch(e.data.type){
 		case 'sound':
@@ -148,7 +148,7 @@ function handleMessage(e){
 			bottomMessage.textContent='Could not find the word on this page.';
 		break;
 		case 'theme':if(e.data.theme==1){document.body.classList.add('SKCro');}else{document.body.classList.remove('SKCro');}break;
-		//Alert handing stuff
+		// Alert handing stuff
 		case 'alert':showAlert(e.data.text);break;
 		case 'jsalert':alert(e.data.text);break;
 		case 'alertImage':setAlertImage(`url(${e.data.image})`);break;
@@ -157,7 +157,7 @@ function handleMessage(e){
 		case 'alertButtonAction':setAlertButtonAction();break;
 		case 'alertSound':setAlertSound(e.data.sound);break;
 		case 'showCustomAlert':openDialog();break;
-		//Other stuff
+		// Other stuff
 		case 'knockoffGaming':
 			const knockoffPath='audio/knockoff/';
 			clickSound=new Audio(knockoffPath+'click.mp3');
@@ -191,21 +191,21 @@ function handleMessage(e){
 	}
 }addEventListener('message',handleMessage);
 
-//Apply fixes if the user is using macOS Safari
+// Apply fixes if the user is using macOS Safari
 function safariStupid(){
 	var ua=navigator.userAgent.toLowerCase();
 	if(ua.indexOf('safari')!==-1&&ua.indexOf('chrome')===-1&&ua.indexOf('iphone')===-1){return true;}
 	else{return false;}
 }if(safariStupid()){document.body.classList.add('safari');console.log('safari stupid');}
 
-//Location-related stuff
+// Location-related stuff
 location.go=function(url){if(url){iframe.contentWindow.location.href=url;return `Going to ${url}`;}else{console.info(`Usage: location.go('url')`)}}
 
-//Redirect if the user directly specifies a URL via ?page=
+// Redirect if the user directly specifies a URL via ?page=
 const pageValue=new URLSearchParams(location.search).get('page');
 if(pageValue){location.go(pageValue);}
 
-//Options bar stuff
+// Options bar stuff
 let lastSelectedButton;
 function showOptionsBar(){
 	iframe.classList.add('noFocus');
@@ -283,10 +283,10 @@ window.removeNoSelects=function(){
 	panelAction.classList.remove('noselect');
 }
 
-//Top row buttons
+// Top row buttons
 window.home=function(){
 	hideOptionsBarNoSound();
-	location.go('https://coltonsr77.github.io/WebTV-HD-Updated/wtv-home/home.html');
+	location.go('http://coltonsr77.github.io/WebTV-HD-Updated/wtv-home/home.html');
 }
 
 window.find=function(text){
@@ -381,12 +381,12 @@ window.goTo=function(url){
 }
 
 window.view=function(){
-	//This code sucks. Really wish I could make it better.
+	// This code sucks. Really wish I could make it better.
 	if(tvFrame.classList.contains('hidden')){
 		hideOptionsBarNoSound();
 		stopBGMusic();
 		setTimeout(function(){
-			//Switch to TV mode
+			// Switch to TV mode
 			playSound(viewSound);
 			statusBar.classList.remove('slide-in');
 			iframe.offsetHeight;
@@ -410,7 +410,7 @@ window.view=function(){
 		},750);
 	}else{
 		setTimeout(function(){
-			//Switch to Web mode
+			// Switch to Web mode
 			playSound(viewSound);
 			tvFrame.classList.remove('flip-back');
 			statusBar.classList.add('slide-in');
@@ -455,7 +455,7 @@ window.send=function(email){
 	function doSend(){window.open(`mailto:${textInput.value}?body=${location.href}`,'_blank');closePanel();}
 }
 
-//Bottom row buttons
+// Bottom row buttons
 window.music=function(){
 	hideOptionsBarNoSound();
 	const musicIndicator=document.getElementById('musicIndicator');
@@ -480,7 +480,7 @@ window.hangUp=function(){
 	setTimeout(function(){highlightNoScroll(document.getElementById('reconnectButton'));},500);//because my js is wack and something is causing it to defocus
 }
 
-//Reconnect logic
+// Reconnect logic
 window.reconnect=function(){
 	const reconnectPanel=document.getElementById('reconnectPanel');
 	playSound(modem);
@@ -570,7 +570,7 @@ window.closePanel=function(){
 	setTimeout(function(){panel.classList.add('hiding');panel.classList.remove('hide');},300);
 }
 
-//Background music, baby!
+// Background music, baby!
 const bgMusic=document.getElementById('bgmusic');
 const musicIndicator=document.getElementById('musicIndicator');
 const musicList=[
@@ -637,7 +637,7 @@ window.fadeOutMusic=function(){
 			pickNextSong();
 			bgMusic.volume=1;
 		}
-	},0.5*10);//First value is the fade-out duration in seconds
+	},0.5*10);// First value is the fade-out duration in seconds
 }
 window.checkBGMusicStatus=function(){
 	async function check(message){
@@ -658,7 +658,7 @@ window.checkBGMusicStatus=function(){
 	}if(check===1){startBGMusicWithDelay(500);}else if(check===0){pickNextSong();}else{startBGMusicWithDelay(500);}
 }
 
-//Audioscope logic
+// Audioscope logic
 setTimeout(function(){statusContainer.classList.remove('has-audioscope');},10);
 window.toggleAudioscope=function(){if(statusContainer.classList.contains('has-audioscope')){hideAudioscope();}else{showAudioscope();}}
 window.showAudioscope=function(){statusContainer.classList.add('has-audioscope');}
@@ -671,10 +671,10 @@ if(statusbarAudioscope&&statusbarAudioscope.shadowRoot){
 }
 */
 
-//Sidebar toggling logic, parent-side
+// Sidebar toggling logic, parent-side
 function toggleSidebar(){iframe.contentWindow.postMessage({type:'toggleSidebar'},'*');}
 
-//Loading panel logic
+// Loading panel logic
 const loadingPanel=document.getElementById('loadingPanel');
 const loadingMessage=document.getElementById('loadingMessage');
 const loadingIndicator=document.querySelector('.status-indicator');
@@ -699,7 +699,7 @@ window.stopLoading=function(){
 }
 iframe.addEventListener('load',stopLoading);
 
-//Dialog/showAlert logic
+// Dialog/showAlert logic
 window.dialog=document.getElementById('dialog');
 window.dialogLogo=document.getElementById('dialogLogo');
 window.dialogMessage=document.getElementById('dialogMessage');
@@ -803,7 +803,7 @@ function resetSelectionBoxIframe(){
 	iframe.contentWindow.postMessage({type:'resetSelectionBox'},'*');
 }
 
-//Modified functions from main.js - button sounds and tabindexes
+// Modified functions from main.js - button sounds and tabindexes
 const inputs=document.querySelectorAll('.input');
 const submitInputs=document.querySelectorAll('.submit');
 const clickableStuff=document.querySelectorAll('.clickable');
@@ -830,7 +830,7 @@ for(let l=0;l<inputNoSound.length;l++){
 	inputNoSound[l].setAttribute('tabindex',0);
 }
 
-//Prevent running directly from disk since it doesn't function properly without a server
+// Prevent running directly from disk since it doesn't function properly without a server
 if(location.href.startsWith('file://')){
 	iframe.remove();
 	tvFrame.remove();
