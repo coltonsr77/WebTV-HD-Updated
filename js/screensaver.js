@@ -1,5 +1,5 @@
 'use strict';
-//Screensaver code forked (read: heavily modified) from Yannis' DVD Screensaver remake - https://codepen.io/heinhein/pen/WPZpVv
+// Screensaver code forked (read: heavily modified) from Yannis' DVD Screensaver remake - https://codepen.io/heinhein/pen/WPZpVv
 const logos=[];
 let logoCount=1;
 
