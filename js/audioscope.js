@@ -1,5 +1,5 @@
 'use strict';
-//Audioscope code forked from Sgeo's webtv-audioscope project - https://github.com/Sgeo/webtv-audioscope
+// Audioscope code forked from Sgeo's webtv-audioscope project - https://github.com/Sgeo/webtv-audioscope
 (function(){
 	function clamp(number,min,max){return Math.max(min,Math.min(number,max));}
 	function fixColor(colorstr){return colorstr.replace(/^[0-9a-fA-F]+$/,'#$&');}
