@@ -1,4 +1,4 @@
-//Create selection box and append it to page
+// Create selection box and append it to page
 window.selectionBox=document.createElement('div');
 selectionBox.id='selectionBox';
 selectionBox.setAttribute('aria-hidden','true');
@@ -26,7 +26,7 @@ if(location.pathname==='/'||location.pathname==='index.html'){disableScrolling=t
 function updateSelectionBox(v){
 	if(selectedElement){
 		const elementRect=selectedElement.getBoundingClientRect();
-		//Apply calculated dimensions and position to the selection box
+		// Apply calculated dimensions and position to the selection box
 		selectionBox.style.top=elementRect.top+'px';
 		selectionBox.style.left=elementRect.left+'px';
 		selectionBox.style.width=elementRect.width+2+'px';
@@ -34,13 +34,13 @@ function updateSelectionBox(v){
 		selectionBox.style.display='block';
 		if(v){
 			if(v===1){
-				//Change the selection box to green
+				// Change the selection box to green
 				if(!selectedElement.classList.contains('input')){
 					selectionBox.classList.add('green');
 					setTimeout(function(){selectionBox.classList.remove('green');},100);
 				}
 			}else if(v===2){try{
-				//Check if the element is offscreen and scroll if it is
+				// Check if the element is offscreen and scroll if it is
 				if(disableScrolling===true){console.error('scroll attempted!');console.trace();return;}
 				if(disableScrolling!==true&&isElementOffScreen(selectedElement)){selectedElement.scrollIntoView({behavior:'smooth',block:'end',inline:'end'});}
 				selectedElement.focus({focusVisible:false});}catch(error){}
@@ -50,7 +50,7 @@ function updateSelectionBox(v){
 }
 addEventListener('resize',updateSelectionBox);
 addEventListener('wheel',updateSelectionBox);
-setInterval(updateSelectionBox,1);//Gotta find a better way to do this - maybe only update when changes to the element are detected?
+setInterval(updateSelectionBox,1);// Gotta find a better way to do this - maybe only update when changes to the element are detected?
 function checkIfInteractive(e){
 	return(
 		(e.classList.contains('clickable')||e.classList.contains('submit'))
@@ -64,7 +64,7 @@ function getInteractiveElements(){
 	for(let i=0;i<allElements.length;i++){if(checkIfInteractive(allElements[i])){interactiveElements.push(allElements[i]);}}
 	return interactiveElements;
 }
-//Find the nearest interactive element to a given position
+// Find the nearest interactive element to a given position
 function findNearestInteractiveElement(x,y){
 	const interactiveElements=getInteractiveElements();
 	const nearestElement=null;
