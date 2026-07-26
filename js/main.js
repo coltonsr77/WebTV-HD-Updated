@@ -157,11 +157,11 @@ function handleMessage(e){
 	}
 }addEventListener('message',handleMessage);
 
-//Options bar toggling logic
+// Options bar toggling logic
 addEventListener('keydown',function(e){if(e.keyCode===46){e.preventDefault();parent.postMessage({type:'showOptionsBar'},'*');parent.focus();}});
 
-//Knockoff mode placeholder to prevent errors
+// Knockoff mode placeholder to prevent errors
 if(location.href.includes('PowerOn.html')===false){window.doKnockoffFunnies=function(){return 'You need to run this command on the PowerOn page for it to work. To get there quickly, hold shift and click reload.';}}
 
-//Is the current page TV Home?
+// Is the current page TV Home?
 function isTVHome(){if(location.href.includes('TVHome.html')){return true;}else{return false;}}
